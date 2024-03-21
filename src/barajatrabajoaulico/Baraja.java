@@ -9,5 +9,17 @@ package barajatrabajoaulico;
  * @author NandoJ
  */
 public class Baraja {
+    private Carta[] bar;
     
+    public Baraja() {
+        bar=new Carta[40];
+    }
+    
+    public void crearBaraja(){
+        
+}
+    
+    public void barajar(){
+        
+    }
 }

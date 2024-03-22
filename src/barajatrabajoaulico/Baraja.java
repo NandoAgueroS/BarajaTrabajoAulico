@@ -49,15 +49,15 @@ public class Baraja {
         return cartas.size();
 }
     public List<Carta> darCartas(int cantidad) {
-        if (cantidad<cartas.size()) {
-            for (int i = 0; i < cantidad; i++) {
-                siguienteCarta();
-            }
-        }else{
-            System.out.println("No hay cartas suficientes");
-            System.out.println("Cartas disponibles: "+cartas.size());
+        if (cantidad > cartas.size()) {
+            System.out.println("No hay suficientes cartas para dar " + cantidad + " cartas.");
+            return null;
         }
-        return null;
+        List<Carta> cartasDadas = new ArrayList<>();
+        for (int i = 0; i < cantidad; i++) {
+            cartasDadas.add(siguienteCarta());
+        }
+        return cartasDadas;
     }
 
     public void cartasMonton() {

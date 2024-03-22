@@ -44,4 +44,7 @@ public class Baraja {
         return carta;
 
     }
+    public int caratasDisponibles(){
+        return cartas.size();
+}
 }

@@ -4,22 +4,37 @@
  */
 package barajatrabajoaulico;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  *
  * @author NandoJ
  */
 public class Baraja {
-    private Carta[] bar;
+    private List<Carta> cartas;
     
     public Baraja() {
-        bar=new Carta[40];
+        cartas=new ArrayList<>();
+        String[]palos={"Espada","Oro","Basto","Copa"};
+        for (String palo : palos) {
+            for(int numero=1;numero<=12;numero++){
+                if(numero!=8  && numero!=9){
+                    cartas.add(new Carta(numero,palo));
+                    
+                }
+            }
+        }
     }
     
-    public void crearBaraja(){
+    public void baraja(){
+        Collections.shuffle(cartas);
+        
         
 }
     
-    public void barajar(){
-        
+    public void siguenteCarta(){
+        cartas.empty();
     }
 }

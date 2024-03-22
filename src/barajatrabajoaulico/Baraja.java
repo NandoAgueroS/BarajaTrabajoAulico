@@ -47,4 +47,21 @@ public class Baraja {
     public int cartasDisponibles(){
         return cartas.size();
 }
+    public void darCartas(int cantidad){
+        if (cantidad>cartas.size()) {
+            for (int i = 0; i < cantidad; i++) {
+                siguienteCarta();
+            }
+        }else{
+            System.out.println("No hay cartas suficientes");
+            System.out.println("Cartas disponibles: "+cartas.size());
+        }
+    }
+    
+    public void mostrarBaraja(){
+        System.out.println("Baraja:");
+        for (Carta carta : cartas) {
+            System.out.println(carta);
+        }
+    }
 }

@@ -38,7 +38,7 @@ public class Main {
                     baraja.barajar();
                     break;
                 case 2:
-                    System.out.println("Siguiente carta: " + baraja.siguenteCarta());
+                    System.out.println("Siguiente carta: " + baraja.siguienteCarta());
                     break;
                 case 3:
                     System.out.println("Cartas disponibles: " + baraja.cartasDisponibles());

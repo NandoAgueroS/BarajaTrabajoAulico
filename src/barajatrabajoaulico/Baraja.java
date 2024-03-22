@@ -13,8 +13,8 @@ import java.util.List;
  * @author NandoJ
  */
 public class Baraja {
-    private List<Carta> cartas;
-    
+    private final List<Carta> cartas;
+    private List<Carta> monton;
     public Baraja() {
         cartas=new ArrayList<>();
         String[]palos={"Espada","Oro","Basto","Copa"};
@@ -34,7 +34,14 @@ public class Baraja {
         
 }
     
-    public void siguenteCarta(){
-        cartas.empty();
+    public Carta siguenteCarta(){
+        if(cartas.isEmpty()){
+            System.out.println("!no hay mas cartas!");
+            return null;
+        }
+        Carta carta = cartas.remove(0);
+        monton.add(carta);
+        return carta;
+
     }
 }

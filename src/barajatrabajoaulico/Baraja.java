@@ -28,13 +28,13 @@ public class Baraja {
         }
     }
     
-    public void baraja(){
+    public void barajar(){
         Collections.shuffle(cartas);
         
         
 }
     
-    public Carta siguenteCarta(){
+    public Carta siguienteCarta(){
         if(cartas.isEmpty()){
             System.out.println("!no hay mas cartas!");
             return null;
@@ -44,7 +44,7 @@ public class Baraja {
         return carta;
 
     }
-    public int caratasDisponibles(){
+    public int cartasDisponibles(){
         return cartas.size();
 }
 }
